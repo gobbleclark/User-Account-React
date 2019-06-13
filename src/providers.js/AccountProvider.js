@@ -12,7 +12,12 @@ const AccountContext = React.createContext();
      state = {
          username: 'Fooman77',
          dateJoined: '12/18/18',
-         membershipLevel: 'Silver'
+         membershipLevel: 'Silver',
+         updateAccount: (account) => this.updateAccount(account),
+
+     }
+     updateAccount = (account) => {
+         this.setState({...account})
      }
     
     render() {
@@ -27,4 +32,4 @@ const AccountContext = React.createContext();
 
 
 
-export default AccountProvider;
+export default AccountConsumer ;
